@@ -1,0 +1,13 @@
+<div id= "center"> 
+<% if current_user %>
+  <%= link_to 'logout', logout_path %></br>
+  <%= link_to 'user profile', user_path(current_user) %>
+  <%= render 'movies/form' %>
+  <h1> Movie List </h1>
+  <%= render @movies %>
+<%else%>
+<p> Welcome! </p>
+  <%= link_to 'create user', new_user_path %>
+  <%= link_to 'login', login_path %>
+<% end %>
+</div>

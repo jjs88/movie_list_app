@@ -1,0 +1,6 @@
+<%= @movie.name %> 
+<p> Tags:
+<% @movie.tags.each do |t| %>
+	<%= t.name %>
+<% end %>
+</p>
